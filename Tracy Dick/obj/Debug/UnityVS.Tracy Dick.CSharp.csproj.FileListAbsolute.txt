@@ -1,0 +1,11 @@
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\obj\Debug\UnityVS.Tracy Dick.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\obj\Debug\Assembly-CSharp.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\obj\Debug\Assembly-CSharp.pdb
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.pdb
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb

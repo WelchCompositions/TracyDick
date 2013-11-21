@@ -1,0 +1,14 @@
+﻿D:\_GameJam\Building Assets\Combined\t$m$p$$$\BuildingAssets_01.max
+D:\_GameJam\Building Assets\Combined\t$m$p$$$\MAXFILES.TXT
+D:\_GameJam\Building Assets\Pipes1\Pipes_Diff.jpg
+D:\_GameJam\Building Assets\Pipes1\Pipes_Spec.jpg
+D:\_GameJam\Building Assets\Pipes1\Pipes_Norm.jpg
+D:\_GameJam\Building Assets\Pipes2\PipeCaps_Diff.jpg
+D:\_GameJam\Building Assets\Pipes2\PipeCaps_Spec.jpg
+D:\_GameJam\Building Assets\Pipes2\PipeCaps_Bump.jpg
+D:\_GameJam\Building Assets\GarageDoors\GarageDoors_Diff.jpg
+D:\_GameJam\Building Assets\GarageDoors\GarageDoors_Spec.jpg
+D:\_GameJam\Building Assets\GarageDoors\GarageDoors_Normp.jpg
+D:\_GameJam\Building Assets\Window1\WindowDiff.jpg
+D:\_GameJam\Building Assets\Window1\WindowSpec.jpg
+D:\_GameJam\Building Assets\Window1\WindowNorm.jpg
