@@ -18,7 +18,7 @@ public class WeaponMovement : MonoBehaviour {
     {
         gameStateManager = GameObject.Find("GameStateManager");
         gameStateScript = gameStateManager.GetComponent<GameStateScript>();
-        MainCamera = GameObject.Find("MainCamera");
+        MainCamera = GameObject.Find("Main Camera");
         BackgroundController = MainCamera.GetComponent<BackgroundController>();
 	}
 	
@@ -28,7 +28,7 @@ public class WeaponMovement : MonoBehaviour {
         RotateSpeed = gameStateScript.RotateSpeed;
         ItemSpeed = gameStateScript.WeaponSpeed;
         transform.Translate(Vector3.left * Time.deltaTime * ItemSpeed, Space.World);
-        transform.Rotate(Vector3.up * Time.deltaTime * RotateSpeed, Space.World);
+        //transform.Rotate(Vector3.up * Time.deltaTime * RotateSpeed, Space.World);
         //if (transform.position.x < OffScreenPosition)
         //{
         //    transform.position = new Vector3(ResetLocation, transform.position.y, transform.position.z);

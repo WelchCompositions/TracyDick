@@ -36,6 +36,8 @@ public class GameStateScript : MonoBehaviour
     public Transform[] Backgrounds;
     public int[] WeaponDropHeightArray;
 
+    public Transform Wrench;
+
     public float PlayerMoveSpeed;
     public float PlayerHinder;
 
@@ -49,7 +51,7 @@ public class GameStateScript : MonoBehaviour
     public float LittleTimer;
     public float ReallyBigTimer;
     public bool CanCreate;
-
+    public float WeaponTimer;
     public int RotateSpeed;
 
     // Use this for initialization
@@ -74,41 +76,23 @@ public class GameStateScript : MonoBehaviour
         }
             if (!GameOver)
             {
-
-                //BackgroundTimer -= Time.deltaTime;
-                //if (BackgroundTimer <= 0)
-                //{
-                //    BackgroundTimer = 0.0f;
-                //    CreateBackground();
-                //}
-                //if (CreateBackground)
-                //{
-                //    var BackgroundToCreate = Random.Range(0, Backgrounds.Length);
-                //    Instantiate(Backgrounds[BackgroundToCreate], new Vector3(0, 11, 0), Quaternion.identity);
-                //    CreateBackground = false;
-                //    //BackgroundsInPlay += 1;
-                //}
                 if (WeaponsInPlay < 1)
                 {
-                    int WeaponDropHeight;
-                    if (Credibility % 2 == 0)
+                    WeaponTimer -= Time.deltaTime;
+                    if (WeaponTimer <= 0)
                     {
-                        WeaponDropHeight = 4;
-                    }
-                    else if (Credibility % 3 == 0)
-                    {
-                        WeaponDropHeight = 9;
-                    }
-                    else
-                    {
-                        WeaponDropHeight = 14;
-                    }
-                    //var WeaponDropHeight = Random.Range(WeaponDropHeightArray[0], WeaponDropHeightArray[2]);                   
-                    Debug.Log("Weapon drop height " + WeaponDropHeight);
-                    var WeaponToDrop = Random.Range(0, Weapons.Length);
-                    Instantiate(Weapons[WeaponToDrop], new Vector3(-14, 4, -10.8f), Quaternion.identity);
-                    WeaponsInPlay += 1;
+                        var WeaponDropHeight = Random.Range(0, 3);
+                        var WeaponToDrop = Random.Range(0, Weapons.Length);
+                        Instantiate(Weapons[WeaponToDrop], new Vector3(-14, WeaponDropHeightArray[WeaponDropHeight], -11f), Quaternion.identity);
+                        Debug.Log("Weapon drop height " + WeaponDropHeight);
+                        WeaponsInPlay += 1;
+                        WeaponTimer = 1.5f;
+                    }  
                 }
+                //if (Input.GetKeyDown(KeyCode.A))
+                //{
+                //    Instantiate(Wrench, new Vector3(-14, 4, -11f), Quaternion.identity);
+                //}
                 if (TrashCansInPlay < 1)
                 {
                     var TrashCanToDrop = Random.Range(0, TrashCans.Length);

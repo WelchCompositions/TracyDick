@@ -1,0 +1,12 @@
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\SyntaxTree.VisualStudio.Unity.Bridge.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\SyntaxTree.VisualStudio.Unity.Messaging.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityVS.VersionSpecific.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.pdb
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\obj\Debug\UnityVS.Tracy Dick.UnityScript.Editor.unityprojResolveAssemblyReference.cache
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\obj\Debug\Assembly-UnityScript-Editor.dll
+C:\Users\William\Desktop\IGDA Game Jam 2013\Tracy Dick\obj\Debug\Assembly-UnityScript-Editor.pdb

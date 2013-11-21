@@ -5,10 +5,16 @@ public class MovePlayer : MonoBehaviour
 {
     public GameStateScript gameStateScript;
     public GameObject gameStateManager;
+    public BackgroundController BackgroundController;
+    public GameObject MainCamera;
+    public JumpSoundScript jumpSoundScript;
+    public GameObject JumpSoundObject;
+    public MainGUI MainGUI;
 
     public float PlayerStart;
     public float PlayerEnd;
     public float PlayerLose;
+    public float PlayerWin;
 
     public AudioClip ItemCollected;
 
@@ -19,7 +25,16 @@ public class MovePlayer : MonoBehaviour
     {
         gameStateManager = GameObject.Find("GameStateManager");
         gameStateScript = gameStateManager.GetComponent<GameStateScript>();
+        MainCamera = GameObject.Find("Main Camera");
+        BackgroundController = MainCamera.GetComponent<BackgroundController>();
+        MainGUI = MainCamera.GetComponent<MainGUI>();
+        JumpSoundObject = GameObject.Find("JumpSoundDumpster");
+        jumpSoundScript = JumpSoundObject.GetComponent<JumpSoundScript>();
         PlayerLose = PlayerStart - 2;
+        Lost = false;
+        gameStateScript.Lost = false;
+        gameStateScript.Won = false;
+        gameStateScript.GameOver = false;        
 	}
 	
 	// Update is called once per frame
@@ -32,6 +47,12 @@ public class MovePlayer : MonoBehaviour
         if (PlayerStart < PlayerEnd && Lost == false)
         {
             PlayerStart += gameStateScript.PlayerMoveSpeed * Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //BackgroundController.JumpSound();
+            jumpSoundScript.JumpSound();
         }
 
         if(Input.GetMouseButton(1))
@@ -49,6 +70,16 @@ public class MovePlayer : MonoBehaviour
             gameStateScript.Playing = false;
             gameStateScript.Lost = true;
         }
+
+        if (PlayerStart >= PlayerWin)
+        {
+            gameStateScript.Won = true;
+            gameStateScript.GameOver = true;
+            gameStateScript.Playing = false;
+            MainGUI.Won = true;
+            MainGUI.GameOver = false;
+            Time.timeScale = 0.0f;
+        }
 	}
 
     void OnTriggerEnter(Collider obj)
@@ -59,12 +90,17 @@ public class MovePlayer : MonoBehaviour
             PlayerStart -= gameStateScript.PlayerHinder;
         }
 
-        if (obj.gameObject.tag == "Weapon")
+        //if (obj.gameObject.tag == "Weapon")
+        //{
+        //    audio.PlayOneShot(ItemCollected);
+        //    PlayerStart -= gameStateScript.PlayerHinder;
+        //}
+
+        if (obj.gameObject.tag == "Obstacle")
         {
-            audio.PlayOneShot(ItemCollected);
+            BackgroundController.HurtSound();
             PlayerStart -= gameStateScript.PlayerHinder;
         }
-
         if (obj.gameObject.tag == "TrashCan")
         {
             Debug.Log("BAM!");
@@ -74,7 +110,21 @@ public class MovePlayer : MonoBehaviour
         if (obj.gameObject.tag == "Enemy")
         {
             //Win sequence
+            gameStateScript.Won = true;
+            gameStateScript.GameOver = true;
+            gameStateScript.Playing = false;
+            MainGUI.Won = true;
+            MainGUI.GameOver = false;
             Time.timeScale = 0.0f;
+        }
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Dumpster")
+        {
+            jumpSoundScript.DumpsterSound();
+           // BackgroundController.DumpsterSound();
         }
     }
 }
